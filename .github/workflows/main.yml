@@ -9,7 +9,6 @@ jobs:
     needs: greeting
     runs-on: ubuntu-latest
     container: rootproject/root-conda:${{ matrix.version }}
-    continue-on-error: ${{ matrix.allow_failure }}
     strategy:
       matrix:
         version: [6.18.04,latest]
